@@ -4,7 +4,7 @@ system_release="`lsb_release -sr`"
 system_architecture="`uname -m`"
 
 echo "INSTALL BASE APPS (UBUNTU)"
-echo "Version: 2025.06.02-2120"
+echo "Version: 2025.06.10-1740"
 echo "Author: Danilo Ancilotto"
 echo "System: $system"
 echo "Architecture: $system_architecture"
@@ -308,7 +308,7 @@ sudo apt install dosbox -y
 printLine "Dropbox"
 if [ ! -f "/usr/bin/dropbox" ]
 then
-  dpkgInstall "dropbox.deb" "https://linux.dropbox.com/packages/ubuntu/dropbox_2024.04.17_amd64.deb"
+  dpkgInstall "dropbox.deb" "https://linux.dropbox.com/packages/ubuntu/dropbox_2025.05.20_amd64.deb"
 else
   echo "dropbox is already installed"
 fi

@@ -65,7 +65,7 @@ curl -H 'Cache-Control: no-cache' -sSL https://raw.githubusercontent.com/daniloa
   - Menu
     - ~/.local/share/applications/appimagekit-balena-etcher-electron.desktop
 - DOSBox - Latest (Repository)
-- [Dropbox - 2024.04.17 (Dpkg)](https://www.dropbox.com/install-linux)
+- [Dropbox - 2025.05.20 (Dpkg)](https://www.dropbox.com/install-linux)
 - FileZilla - Latest (Repository)
   - Database
     - ~/.config/filezilla/queue.sqlite3
