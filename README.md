@@ -45,6 +45,7 @@ curl -H 'Cache-Control: no-cache' -sSL https://raw.githubusercontent.com/daniloa
 - FFmpeg - Latest (Repository)
 - Sensors - Latest (Repository)
 - Samba - Latest (Repository)
+- FUSE - Latest (Repository)
 - OpenJDK - 8 (Repository)
   - Menu
     - ~/.local/share/applications/openjdk-8-policytool.desktop

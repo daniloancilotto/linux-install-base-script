@@ -4,7 +4,7 @@ system_release="`lsb_release -sr`"
 system_architecture="`uname -m`"
 
 echo "INSTALL BASE APPS (UBUNTU)"
-echo "Version: 2025.06.10-1740"
+echo "Version: 2025.06.17-1550"
 echo "Author: Danilo Ancilotto"
 echo "System: $system"
 echo "Architecture: $system_architecture"
@@ -127,6 +127,9 @@ sudo apt install lm-sensors -y
 
 printLine "Samba"
 sudo apt install samba -y
+
+printLine "FUSE"
+sudo apt install fuse2fs -y
 
 printLine "OpenJDK"
 
