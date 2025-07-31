@@ -4,7 +4,7 @@ system_release="`lsb_release -sr`"
 system_architecture="`uname -m`"
 
 echo "INSTALL BASE APPS (UBUNTU)"
-echo "Version: 2025.07.09-1020"
+echo "Version: 2025.07.31-1030"
 echo "Author: Danilo Ancilotto"
 echo "System: $system"
 echo "Architecture: $system_architecture"
@@ -256,52 +256,45 @@ echo "audacity have been configured"
 
 printLine "balenaEtcher"
 
-home_app_name="balena-etcher"
-home_app_subdir="$home_app_dir/$home_app_name"
-home_app_cversion="`cat "$home_app_subdir/version.txt"`"
-home_app_version="2.1.1"
+root_app_name="balena-etcher"
+root_app_subdir="$root_app_dir/$root_app_name"
+root_app_cversion="`sudo cat "$root_app_subdir/version.txt"`"
+root_app_version="2.1.4"
 
-if [ "$home_app_cversion" != "$home_app_version" ]
+if [ "$root_app_cversion" != "$root_app_version" ]
 then
-  rm -rf "$home_app_subdir"
+  sudo rm -rf "$root_app_subdir"
+
+  sudo apt remove balena-etcher -y
 fi
 
-if [ ! -d "$home_app_subdir" ]
+if [ ! -f "/usr/bin/balena-etcher" ]
 then
-  mkdir -pv "$home_app_subdir"
-  file="$home_app_subdir/balenaEtcher-$home_app_version-x64.AppImage"
-  wget -O "$file" "https://github.com/balena-io/etcher/releases/download/v$home_app_version/balenaEtcher-$home_app_version-x64.AppImage"
-  ln -sv -T "$file" "$home_app_subdir/balena-etcher.AppImage"
-  chmod +x "$file"
+  dpkgInstall "balena-etcher.deb" $'https://github.com/balena-io/etcher/releases/download/v'$root_app_version$'/balena-etcher_'$root_app_version$'_amd64.deb'
 
-  current_dir="`pwd`"
-  cd "$home_app_subdir"
-  "$file" --appimage-extract
-  cd "$current_dir"
-  cp -fv "$home_app_subdir/squashfs-root/balena-etcher.png" "$home_app_subdir/balena-etcher.png"
-  rm -rf "$home_app_subdir/squashfs-root"
+  sudo mkdir -pv "$root_app_subdir"
 
-  if [ -f "$home_app_subdir/balena-etcher.AppImage" ]
+  if [ -f "/usr/bin/balena-etcher" ]
   then
-    echo "$home_app_version" > "$home_app_subdir/version.txt"
+    echo "$root_app_version" | sudo tee "$root_app_subdir/version.txt"
   fi
 else
-  echo "$home_app_name is already installed"
+  echo "$root_app_name is already installed"
+fi
+
+home_app_name="balena-etcher"
+home_app_subdir="$home_app_dir/$home_app_name"
+
+if [ -d "$home_app_subdir" ]
+then
+  rm -rfv "$home_app_subdir"
 fi
 
 file="$home_menu_dir/appimagekit-balena-etcher-electron.desktop"
-desk=$'[Desktop Entry]\n'
-desk+=$'Name=balenaEtcher\n'
-desk+=$'GenericName=balenaEtcher\n'
-desk+=$'Comment=Flash OS images to SD cards and USB drives, safely and easily.\n'
-desk+=$'Comment[pt_BR]=Gravar imagens de SO em cartões SD e drives USB, com segurança e facilidade.\n'
-desk+=$'Exec="'$home_app_subdir$'/balena-etcher.AppImage" --no-sandbox %U\n'
-desk+=$'Terminal=false\n'
-desk+=$'Type=Application\n'
-desk+=$'Icon='$home_app_subdir$'/balena-etcher.png\n'
-desk+=$'StartupWMClass=balenaEtcher\n'
-desk+=$'Categories=Utility;\n'
-echo "$desk" > "$file"
+if [ -f "$file" ]
+then
+  rm -fv "$file"
+fi
 
 echo "$home_app_name have been configured"
 
