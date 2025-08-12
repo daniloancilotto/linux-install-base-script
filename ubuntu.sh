@@ -4,7 +4,7 @@ system_release="`lsb_release -sr`"
 system_architecture="`uname -m`"
 
 echo "INSTALL BASE APPS (UBUNTU)"
-echo "Version: 2025.07.31-1030"
+echo "Version: 2025.08.12-0910"
 echo "Author: Danilo Ancilotto"
 echo "System: $system"
 echo "Architecture: $system_architecture"
@@ -145,33 +145,43 @@ menuConf "$home_menu_dir" "htop.desktop" "NoDisplay" "true"
 
 echo "htop have been configured"
 
-printLine "4K Video Downloader"
+printLine "4K Video Downloader+"
 
-root_app_name="4kvideodownloader"
+root_app_name="4kvideodownloaderplus"
 root_app_subdir="$root_app_dir/$root_app_name"
 root_app_cversion="`sudo cat "$root_app_subdir/version.txt"`"
-root_app_version="4.33.5"
+root_app_version="25.2.0"
 
 if [ "$root_app_cversion" != "$root_app_version" ]
 then
   sudo rm -rf "$root_app_subdir"
 
-  sudo apt remove 4kvideodownloader -y
+  sudo apt remove 4kvideodownloaderplus -y
 fi
 
-if [ ! -f "/usr/bin/4kvideodownloader" ]
+if [ ! -f "/usr/bin/4kvideodownloaderplus" ]
 then
-  dpkgInstall "4kvideodownloader.deb" "https://dl.4kdownload.com/app/4kvideodownloader_$root_app_version-1_amd64.deb"
+  dpkgInstall "4kvideodownloaderplus.deb" "https://dl.4kdownload.com/app/4kvideodownloaderplus_$root_app_version-1_amd64.deb"
 
   sudo mkdir -pv "$root_app_subdir"
 
-  if [ -f "/usr/bin/4kvideodownloader" ]
+  if [ -f "/usr/bin/4kvideodownloaderplus" ]
   then
     echo "$root_app_version" | sudo tee "$root_app_subdir/version.txt"
   fi
 else
   echo "$root_app_name is already installed"
 fi
+
+subdir="$root_app_dir/4kvideodownloader"
+if sudo test -d "$subdir"
+then
+  sudo rm -rfv "$subdir"
+
+  sudo apt remove 4kvideodownloader -y
+fi
+
+echo "$root_app_name have been configured"
 
 printLine "Angry IP Scanner"
 
@@ -282,12 +292,10 @@ else
   echo "$root_app_name is already installed"
 fi
 
-home_app_name="balena-etcher"
-home_app_subdir="$home_app_dir/$home_app_name"
-
-if [ -d "$home_app_subdir" ]
+subdir="$home_app_dir/balena-etcher"
+if [ -d "$subdir" ]
 then
-  rm -rfv "$home_app_subdir"
+  rm -rfv "$subdir"
 fi
 
 file="$home_menu_dir/appimagekit-balena-etcher-electron.desktop"
@@ -296,7 +304,7 @@ then
   rm -fv "$file"
 fi
 
-echo "$home_app_name have been configured"
+echo "$root_app_name have been configured"
 
 printLine "DOSBox"
 sudo apt install dosbox -y
