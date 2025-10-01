@@ -4,7 +4,7 @@ system_release="`lsb_release -sr`"
 system_architecture="`uname -m`"
 
 echo "INSTALL BASE APPS (UBUNTU)"
-echo "Version: 2025.09.05-1650"
+echo "Version: 2025.10.01-0800"
 echo "Author: Danilo Ancilotto"
 echo "System: $system"
 echo "Architecture: $system_architecture"
@@ -480,9 +480,9 @@ printLine "Zoiper5"
 root_app_name="zoiper5"
 root_app_subdir="$root_app_dir/$root_app_name"
 root_app_cversion="`sudo cat "$root_app_subdir/version.txt"`"
-root_app_dropbox_path="a1jcvldl21xnm6dkpmb1m"
-root_app_dropbox_key="0ahek5bl1zxziycx62aarb64q"
-root_app_version="5.6.10"
+root_app_dropbox_path="qjb3le7cqws6hflslwnsf"
+root_app_dropbox_key="6ml7maz6sbj0y4eoirzwbzqdl"
+root_app_version="5.6.11"
 
 if [ "$root_app_cversion" != "$root_app_version" ]
 then
