@@ -384,15 +384,12 @@ printLine "GNOME Calculator"
 sudo apt install gnome-calculator -y
 
 printLine "Google Chrome"
-
 if [ -z "`google-chrome --version`" ]
 then
   dpkgInstall "google-chrome.deb" "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 else
   echo "google-chrome is already installed"
 fi
-
-echo "google-chrome have been configured"
 
 printLine "Kdenlive"
 sudo apt install kdenlive -y
