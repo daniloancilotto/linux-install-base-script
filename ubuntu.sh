@@ -391,7 +391,6 @@ then
 else
   echo "google-chrome is already installed"
 fi
-menuConf "$home_menu_dir" "google-chrome.desktop" "Exec" "/usr/bin/google-chrome-stable %U --disable-gpu-driver-bug-workarounds --disable-accelerated-2d-canvas"
 
 echo "google-chrome have been configured"
 
