@@ -88,14 +88,14 @@ curl -H 'Cache-Control: no-cache' -sSL https://raw.githubusercontent.com/daniloa
     - VNC
 - [TeamViewer - Latest (Dpkg)](https://www.teamviewer.com/en-us/download/linux/)
 - Transmission - Latest (Repository)
-- [Ventoy - 1.1.08 (Portable)](https://www.ventoy.net/en/download.html)
+- [Ventoy - 1.1.09 (Portable)](https://www.ventoy.net/en/download.html)
   - Menu
     - ~/.local/share/applications/ventoy.desktop
 - Virt-Manager - Latest (Repository)
   - Menu
     - ~/.local/share/applications/remote-viewer.desktop
 - VLC - Lastest (Repository)
-- [Zoiper5 - 5.6.11 (Dpkg)](https://www.zoiper.com/en/voip-softphone/download/current)
+- [Zoiper5 - 5.6.12 (Dpkg)](https://www.zoiper.com/en/voip-softphone/download/current)
   - Autostart
     - ~/.config/autostart/Zoiper5.desktop
 - Language Pack - Latest (Repository)
