@@ -4,7 +4,7 @@ system_release="`lsb_release -sr`"
 system_architecture="`uname -m`"
 
 echo "INSTALL BASE APPS (UBUNTU)"
-echo "Version: 2026.03.17-1020"
+echo "Version: 2026.04.14-1710"
 echo "Author: Danilo Ancilotto"
 echo "System: $system"
 echo "Architecture: $system_architecture"
@@ -150,7 +150,7 @@ printLine "4K Video Downloader+"
 root_app_name="4kvideodownloaderplus"
 root_app_subdir="$root_app_dir/$root_app_name"
 root_app_cversion="`sudo cat "$root_app_subdir/version.txt"`"
-root_app_version="26.0.8"
+root_app_version="26.1.0"
 
 if [ "$root_app_cversion" != "$root_app_version" ]
 then
@@ -423,7 +423,7 @@ printLine "Ventoy"
 home_app_name="ventoy"
 home_app_subdir="$home_app_dir/$home_app_name"
 home_app_cversion="`cat "$home_app_subdir/version.txt"`"
-home_app_version="1.1.10"
+home_app_version="1.1.11"
 
 if [ "$home_app_cversion" != "$home_app_version" ]
 then
