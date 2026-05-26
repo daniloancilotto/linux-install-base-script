@@ -4,7 +4,7 @@ system_release="`lsb_release -sr`"
 system_architecture="`uname -m`"
 
 echo "INSTALL BASE APPS (UBUNTU)"
-echo "Version: 2026.05.12-1520"
+echo "Version: 2026.05.26-1030"
 echo "Author: Danilo Ancilotto"
 echo "System: $system"
 echo "Architecture: $system_architecture"
@@ -150,7 +150,7 @@ printLine "4K Video Downloader+"
 root_app_name="4kvideodownloaderplus"
 root_app_subdir="$root_app_dir/$root_app_name"
 root_app_cversion="`sudo cat "$root_app_subdir/version.txt"`"
-root_app_version="26.1.1"
+root_app_version="26.1.2"
 
 if [ "$root_app_cversion" != "$root_app_version" ]
 then
@@ -269,7 +269,7 @@ printLine "balenaEtcher"
 root_app_name="balena-etcher"
 root_app_subdir="$root_app_dir/$root_app_name"
 root_app_cversion="`sudo cat "$root_app_subdir/version.txt"`"
-root_app_version="2.1.5"
+root_app_version="2.1.6"
 
 if [ "$root_app_cversion" != "$root_app_version" ]
 then
@@ -312,7 +312,7 @@ sudo apt install dosbox -y
 printLine "Dropbox"
 if [ ! -f "/usr/bin/dropbox" ]
 then
-  dpkgInstall "dropbox.deb" "https://linux.dropbox.com/packages/ubuntu/dropbox_2026.01.15_amd64.deb"
+  dpkgInstall "dropbox.deb" "https://linux.dropbox.com/packages/ubuntu/dropbox_2026.05.06_amd64.deb"
 else
   echo "dropbox is already installed"
 fi
