@@ -52,9 +52,9 @@ curl -H 'Cache-Control: no-cache' -sSL https://raw.githubusercontent.com/daniloa
 - Htop - Latest (Repository)
   - Menu
     - ~/.local/share/applications/htop.desktop
-- [4K Video Downloader+ - 26.1.2 (Dpkg)](https://www.4kdownload.com/downloads)
+- [4K Video Downloader+ - 26.1.4 (Dpkg)](https://www.4kdownload.com/downloads)
 - [Angry IP Scanner - 3.9.3 (Dpkg)](https://angryip.org/download/)
-- [Arduino IDE - 2.3.9 (AppImage)](https://www.arduino.cc/en/software/)
+- [Arduino IDE - 2.3.10 (AppImage)](https://www.arduino.cc/en/software/)
   - Menu
     - ~/.local/share/applications/arduino-ide.desktop
   - User Groups
@@ -86,7 +86,6 @@ curl -H 'Cache-Control: no-cache' -sSL https://raw.githubusercontent.com/daniloa
   - Plugins
     - RDP
     - VNC
-- [TeamViewer - Latest (Dpkg)](https://www.teamviewer.com/en-us/download/linux/)
 - Transmission - Latest (Repository)
 - [Ventoy - 1.1.12 (Portable)](https://www.ventoy.net/en/download.html)
   - Menu
