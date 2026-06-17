@@ -4,7 +4,7 @@ system_release="`lsb_release -sr`"
 system_architecture="`uname -m`"
 
 echo "INSTALL BASE APPS (UBUNTU)"
-echo "Version: 2026.06.10-1440"
+echo "Version: 2026.06.17-0020"
 echo "Author: Danilo Ancilotto"
 echo "System: $system"
 echo "Architecture: $system_architecture"
@@ -114,7 +114,7 @@ printLine "Rar"
 sudo apt install rar unrar -y
 
 printLine "7-Zip"
-sudo apt install p7zip-full -y
+sudo apt install 7zip -y
 
 printLine "Crudini"
 sudo apt install crudini -y
@@ -129,7 +129,7 @@ printLine "Samba"
 sudo apt install samba -y
 
 printLine "FUSE"
-sudo apt install fuse2fs -y
+sudo apt install fuse2fs libfuse2t64 -y
 
 printLine "OpenJDK"
 
@@ -508,7 +508,7 @@ echo "$desk" > "$file"
 echo "$root_app_name have been configured"
 
 printLine "Language Pack"
-sudo apt install language-pack-pt language-pack-gnome-pt -y
+sudo apt install language-pack-pt language-pack-kde-pt language-pack-gnome-pt -y
 sudo apt install language-selector-common -y
 sudo apt install `check-language-support` -y
 
