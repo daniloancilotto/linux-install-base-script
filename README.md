@@ -52,7 +52,7 @@ curl -H 'Cache-Control: no-cache' -sSL https://raw.githubusercontent.com/daniloa
 - Htop - Latest (Repository)
   - Menu
     - ~/.local/share/applications/htop.desktop
-- [4K Video Downloader+ - 26.1.4 (Dpkg)](https://www.4kdownload.com/downloads)
+- [4K Video Downloader+ - 26.1.5 (Dpkg)](https://www.4kdownload.com/downloads)
 - [Angry IP Scanner - 3.9.3 (Dpkg)](https://angryip.org/download/)
 - [Arduino IDE - 2.3.10 (AppImage)](https://www.arduino.cc/en/software/)
   - Menu
