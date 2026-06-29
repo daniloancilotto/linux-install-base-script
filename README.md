@@ -87,7 +87,7 @@ curl -H 'Cache-Control: no-cache' -sSL https://raw.githubusercontent.com/daniloa
     - RDP
     - VNC
 - Transmission - Latest (Repository)
-- [Ventoy - 1.1.12 (Portable)](https://www.ventoy.net/en/download.html)
+- [Ventoy - 1.1.16 (Portable)](https://www.ventoy.net/en/download.html)
   - Menu
     - ~/.local/share/applications/ventoy.desktop
 - Virt-Manager - Latest (Repository)
