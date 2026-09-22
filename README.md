@@ -52,7 +52,7 @@ curl -H 'Cache-Control: no-cache' -sSL https://raw.githubusercontent.com/daniloa
 - Htop - Latest (Repository)
   - Menu
     - ~/.local/share/applications/htop.desktop
-- [4K Video Downloader+ - 26.3.2 (Dpkg)](https://www.4kdownload.com/downloads)
+- [4K Video Downloader+ - 26.3.3 (Dpkg)](https://www.4kdownload.com/downloads)
 - [Angry IP Scanner - 3.10.0 (Dpkg)](https://angryip.org/download/)
 - [Arduino IDE - 2.3.10 (AppImage)](https://www.arduino.cc/en/software/)
   - Menu
@@ -62,7 +62,7 @@ curl -H 'Cache-Control: no-cache' -sSL https://raw.githubusercontent.com/daniloa
 - Audacity - Latest (Repository)
   - Menu
     - ~/.local/share/applications/audacity.desktop
-- [balenaEtcher - 2.1.6 (Dpkg)](https://etcher.balena.io)
+- [balenaEtcher - 2.1.7 (Dpkg)](https://etcher.balena.io)
   - Menu
     - ~/.local/share/applications/appimagekit-balena-etcher-electron.desktop
 - DOSBox - Latest (Repository)
