@@ -4,7 +4,7 @@ system_release="`lsb_release -sr`"
 system_architecture="`uname -m`"
 
 echo "INSTALL BASE APPS (UBUNTU)"
-echo "Version: 2026.10.14-0940"
+echo "Version: 2026.10.28-1730"
 echo "Author: Danilo Ancilotto"
 echo "System: $system"
 echo "Architecture: $system_architecture"
@@ -269,7 +269,7 @@ printLine "balenaEtcher"
 root_app_name="balena-etcher"
 root_app_subdir="$root_app_dir/$root_app_name"
 root_app_cversion="`sudo cat "$root_app_subdir/version.txt"`"
-root_app_version="2.1.7"
+root_app_version="2.1.9"
 
 if [ "$root_app_cversion" != "$root_app_version" ]
 then
