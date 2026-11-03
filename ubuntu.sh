@@ -4,7 +4,7 @@ system_release="`lsb_release -sr`"
 system_architecture="`uname -m`"
 
 echo "INSTALL BASE APPS (UBUNTU)"
-echo "Version: 2026.10.28-1730"
+echo "Version: 2026.11.03-1020"
 echo "Author: Danilo Ancilotto"
 echo "System: $system"
 echo "Architecture: $system_architecture"
@@ -188,7 +188,7 @@ printLine "Angry IP Scanner"
 root_app_name="angryipscanner"
 root_app_subdir="$root_app_dir/$root_app_name"
 root_app_cversion="`sudo cat "$root_app_subdir/version.txt"`"
-root_app_version="3.10.0"
+root_app_version="3.12.1"
 
 if [ "$root_app_cversion" != "$root_app_version" ]
 then
@@ -469,9 +469,9 @@ printLine "Zoiper5"
 root_app_name="zoiper5"
 root_app_subdir="$root_app_dir/$root_app_name"
 root_app_cversion="`sudo cat "$root_app_subdir/version.txt"`"
-root_app_dropbox_path="vk7tfkjqduhia948eazss"
-root_app_dropbox_key="tdrtyig3hojoclb3kgrymyre3"
-root_app_version="5.6.13"
+root_app_dropbox_path="dfgdn4jntvml65kanmkm8"
+root_app_dropbox_key="okpbflhhl72h5xt5fpu3xfmsk"
+root_app_version="5.6.16"
 
 if [ "$root_app_cversion" != "$root_app_version" ]
 then
